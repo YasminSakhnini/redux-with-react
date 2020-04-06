@@ -1,8 +1,9 @@
 import React from 'react';
+import CakeContainer from './components/CakeContainer';
 
 function App() {
   return (
-    <h1>hi</h1>
+    <CakeContainer />
   );
 }
 
