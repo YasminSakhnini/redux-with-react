@@ -1,14 +1,14 @@
-import  { BUY_CAKE } from '../types';
+import { BUY_CAKE } from '../types';
 
 const initialState = {
   numOfCakes: 200
 }
 
-const cakeReducer = (state = initialState, action ) => {
-  switch(action.type) {
+const cakeReducer = (state = initialState, action) => {
+  switch (action.type) {
     case BUY_CAKE: return {
       ...state,
-      numOfCakes: state.numOfCakes -1
+      numOfCakes: action.payload <= state.numOfCakes ? state.numOfCakes - action.payload : state.numOfCakes ,
     }
     default: return state
   }
