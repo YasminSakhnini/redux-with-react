@@ -12,6 +12,7 @@ const initialState = {
   products: [],
   error: '',
   productsCount: 10,
+  offersCount: 5,
 }
 
 const productReducer = (state = initialState, action) => {
@@ -33,17 +34,26 @@ const productReducer = (state = initialState, action) => {
         loading: false,
         error: action.error
       }
-    case INCREASE_PRODUCTS_COUNTER:
+    case 'INCREASE_PRODUCTS_COUNTER':
       return {
         ...state,
-        products: action.payload,
-        productsCount: state.productsCount + 1
+        productsCount: ++state.productsCount,
       }
-    case REDUCE_PRODUCTS_COUNTER:
+    case 'REDUCE_PRODUCTS_COUNTER':
       return {
         ...state,
-        products: action.payload,
-        productsCount: state.productsCount - 1
+        productsCount: --state.productsCount,
+        offersCount: --state.offersCount,
+      }
+    case 'INCREASE_OFFERS_COUNTER':
+      return {
+        ...state,
+        offersCount: ++state.offersCount,
+      }
+    case 'REDUCE_OFFERS_COUNTER':
+      return {
+        ...state,
+        offersCount: --state.offersCount,
       }
     default: return state
   }

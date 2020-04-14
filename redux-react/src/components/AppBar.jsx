@@ -15,8 +15,11 @@ import RedeemIcon from '@material-ui/icons/Redeem';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 const useStyles = makeStyles((theme) => ({
+
   grow: {
     flexGrow: 1,
   },
@@ -87,7 +90,9 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
+  const productsCount = useSelector(state => state.product.productsCount)
+  const offersCount = useSelector(state => state.product.offersCount)
+  const dispatch = useDispatch();
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -133,16 +138,30 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem component={Link} to="/offers" >
-        <IconButton aria-label="show 4 new offers" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+        <IconButton
+          onClick={() => {
+            dispatch({
+              type: 'INCREASE_OFFERS_COUNTER',
+            })
+          }}
+          aria-label="show 4 new offers"
+          color="inherit">
+          <Badge badgeContent={offersCount} color="secondary">
             <RedeemIcon />
           </Badge>
         </IconButton>
         <p>Offers</p>
       </MenuItem>
       <MenuItem component={Link} to="/products">
-        <IconButton aria-label="show 11 new ShoppingCartIcon" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+        <IconButton
+          onClick={() => {
+            dispatch({
+              type: 'INCREASE_PRODUCTS_COUNTER',
+            })
+          }}
+          aria-label="show 11 new ShoppingCartIcon"
+          color="inherit">
+          <Badge badgeContent={productsCount} color="secondary">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -176,7 +195,7 @@ export default function PrimarySearchAppBar() {
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             APP NAME
-                    </Typography>
+          </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -192,13 +211,23 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton to="/src/components/Offers.jsx" aria-label="show 4 new offers" color="inherit">
-              <Badge badgeContent={4} color="secondary">
+            <IconButton
+              onClick={() => {
+                dispatch({
+                  type: 'INCREASE_OFFERS_COUNTER',
+                })
+              }} to="/src/components/Offers.jsx" aria-label="show 4 new offers" color="inherit">
+              <Badge badgeContent={offersCount} color="secondary">
                 <RedeemIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new products" color="inherit">
-              <Badge badgeContent={17} color="secondary">
+            <IconButton
+              onClick={() => {
+                dispatch({
+                  type: 'INCREASE_PRODUCTS_COUNTER',
+                })
+              }} aria-label="show 17 new products" color="inherit">
+              <Badge badgeContent={productsCount} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
