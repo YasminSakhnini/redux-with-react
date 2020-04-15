@@ -34,12 +34,12 @@ const productReducer = (state = initialState, action) => {
         loading: false,
         error: action.error
       }
-    case 'INCREASE_PRODUCTS_COUNTER':
+    case INCREASE_PRODUCTS_COUNTER:
       return {
         ...state,
         productsCount: ++state.productsCount,
       }
-    case 'REDUCE_PRODUCTS_COUNTER':
+    case REDUCE_PRODUCTS_COUNTER:
       return {
         ...state,
         productsCount: --state.productsCount,

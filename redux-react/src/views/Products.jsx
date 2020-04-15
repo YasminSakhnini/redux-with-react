@@ -7,25 +7,25 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 import { useSelector, useDispatch } from 'react-redux';
+import { INCREASE_PRODUCTS_COUNTER, REDUCE_PRODUCTS_COUNTER } from '../store/types'
 
-
-const Offers = props => {
-  const offersCount = useSelector(state => state.product.offersCount)
+const Products = props => {
+  const productsCount = useSelector(state => state.product.productsCount)
   const dispatch = useDispatch();
 
 
   return (
     <React.Fragment>
-      <h1>Offers {offersCount}</h1>
+      <h1>Products {productsCount}</h1>
       <div>
-        <Badge color="secondary" badgeContent={offersCount}>
+        <Badge color="secondary" badgeContent={productsCount}>
           <RedeemIcon />
         </Badge>
         <ButtonGroup>
           <Button
             aria-label="reduce"
             onClick={() => {
-              dispatch({ type: 'REDUCE_OFFERS_COUNTER' })
+              dispatch(REDUCE_PRODUCTS_COUNTER)
             }}
           >
             <RemoveIcon fontSize="small" />
@@ -33,7 +33,7 @@ const Offers = props => {
           <Button
             aria-label="increase"
             onClick={() => {
-              dispatch({ type: 'INCREASE_OFFERS_COUNTER' })
+              dispatch(INCREASE_PRODUCTS_COUNTER)
             }}
           >
             <AddIcon fontSize="small" />
@@ -43,4 +43,4 @@ const Offers = props => {
     </React.Fragment>
   )
 }
-export default Offers;
+export default Products;
