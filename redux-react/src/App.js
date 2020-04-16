@@ -10,7 +10,6 @@ import AppBar from "./components/AppBar";
 import StartPage from "./views/StartPage";
 import Offers from "./views/Offers";
 import Products from "./views/Products";
-
 import data from "./products.json";
 
 function App() {

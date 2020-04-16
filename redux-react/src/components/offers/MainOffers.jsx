@@ -1,18 +1,28 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { useSelector } from "react-redux";
+import CardContainer from "../ui/CardContainer"
 
 const useStyles = makeStyles((theme) => ({
-  yellow: {
-    background: "yellow",
-  },
+  color: {
+        background: "orange",
+
+  }
 }));
 
 const MainOffers = () => {
+  let data = useSelector((state) => state.api.products.filter(i =>
+    {return i.offer}
+  ));
+  
+let mainOfferIds = data.filter(i => {
+  return i.id});
+
   const classes = useStyles();
-  return (
-    <div className={classes.yellow}>
-      <h2>Main Offers</h2>
-    </div>
+  return ( 
+    <div className={classes.color}>
+      <CardContainer data={mainOfferIds}/>
+      </div>
   );
 };
 

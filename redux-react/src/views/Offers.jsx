@@ -8,13 +8,17 @@ const useStyles = makeStyles((theme) => ({
   flexCol: {
     display: "flex",
     flexDirection: "column",
-    background: "red",
+    flexWrap: "wrap",
+    padding: "20px",
   },
   flexRow: {
     display: "flex",
     justifyContent: "space-around",
     "& > div": {
       flexGrow: "1",
+      flexWrap: "wrap",
+      padding: "20px",
+      margin: "5px",
     },
   },
 }));
@@ -22,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 const Offers = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.flexWrapper}>
+    <div className={classes.flexCol}>
       <div>
         <OffersBanner />
       </div>

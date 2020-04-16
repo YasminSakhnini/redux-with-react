@@ -1,24 +1,29 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
+import CardContainer from "../ui/CardContainer"
+
 const useStyles = makeStyles((theme) => ({
-  green: {
-    background: "green",
+  flexRow: {
+    display: "flex",
+    flexDirection: "row",
+    background: "coral",
   },
 }));
 
 const RandomOffers = () => {
-  const data = useSelector((state) => state.api.products);
+let data = useSelector((state) => state.api.products.filter(i =>
+    {return i.offer}
+  ));
   console.log("data", data);
+  let randomOffersData = data.filter(i => {
+  return i.id});
 
   const classes = useStyles();
   return (
-    <div className={classes.green}>
-      <h2>Random Offers</h2>
-      {data.map((x) => (
-        <p key={x.id}>{x.title}</p>
-      ))}
-    </div>
+    <div className={classes.flexRow}>
+    <CardContainer data={randomOffersData}/> 
+    </div>     
   );
 };
 
