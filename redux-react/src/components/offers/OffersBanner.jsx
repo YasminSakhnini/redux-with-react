@@ -1,19 +1,25 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
-import Button from "@material-ui/core/Button";
+import { useSelector } from "react-redux";
+import CardContainer from "../ui/CardContainer"
 
 const useStyles = makeStyles((theme) => ({}));
 
 const OffersBanner = () => {
-  const classes = useStyles();
+  let data = useSelector((state) => state.api.products.filter(i => { return i.bannerOffer }
+  ));
 
+  let bannerOffersData = data.filter(i => {
+    console.log('i.bannerOffer', i.bannerOffer);
+
+    return i.bannerOffer
+  });
+
+  const classes = useStyles();
   return (
     <div>
-      <p>Offers Banners</p>
-      <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
-      </Button>
+      <h2>Banner Offers</h2>
+      <CardContainer data={bannerOffersData} />
     </div>
   );
 };

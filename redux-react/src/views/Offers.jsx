@@ -5,36 +5,26 @@ import MainOffers from "../components/offers/MainOffers";
 import RandomOffers from "../components/offers/RandomOffers";
 
 const useStyles = makeStyles((theme) => ({
-  flexCol: {
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    padding: "20px",
-  },
   flexRow: {
+    flexWrap: "wrap",
     display: "flex",
     justifyContent: "space-around",
-    "& > div": {
-      flexGrow: "1",
-      flexWrap: "wrap",
-      padding: "20px",
-      margin: "5px",
-    },
+    padding: "5px"
   },
 }));
 
 const Offers = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.flexCol}>
-      <div>
+    <>
+      <div className={classes.flexRow}>
         <OffersBanner />
       </div>
       <div className={classes.flexRow}>
         <MainOffers />
         <RandomOffers />
       </div>
-    </div>
+    </>
   );
 };
 

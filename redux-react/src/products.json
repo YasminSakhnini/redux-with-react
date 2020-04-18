@@ -2,8 +2,9 @@
   {
     "id": 1,
     "title": "Adjustable Dial Dumbbell",
-    "price": "$22.99",
     "ratings": "****",
+    "offer": "30% off",
+    "price": "$22.99",
     "description": "Merax Deluxe 71.5 Pounds Adjustable Dial Dumbbell Weight Plate Home Gym 2 PCS (2 x 71.5 LBS)"
   },
   {
@@ -18,6 +19,7 @@
     "id": 3,
     "title": "Plyopic All-in-One Yoga Mat | Luxury",
     "ratings": "****",
+    "offer": "30% off",
     "price": "$22.99",
     "description": "DISCOVER A NEW TYPE OF GRIP – Sticky mats were designed for those who don't sweat. Plyopic mats are designed for everyone else. From moist hands to hot yoga sweats, feel strong and confident in your poses and smooth in your transitions."
   },
@@ -25,12 +27,13 @@
     "id": 4,
     "title": "DHSO Booty Bands Exercise Bands",
     "ratings": "****",
+    "offer": "30% off",
     "price": "$22.99",
     "description": "Upgraded Tube Resistance Bands - The resistance bands come with 5 different resistance level,includes Black (30 lbs.),Green(25 lbs.),Blue (20 lbs.), Red(15 lbs.) and Yellow (10 lbs.).The bands can be used alone or stacked in any combination to achieve your optimal resistance level up to 100 lbs."
   },
   {
     "id": 5,
-    "title": "Perform Better Mini Band Resistance Loop Exercise Bands 9 by 2",
+    "title": "Mini Band Resistance Loop Exercise",
     "ratings": "****",
     "offer": "30% off",
     "price": "$25.99",
@@ -46,7 +49,7 @@
   },
   {
     "id": 7,
-    "title": "TriggerPoint GRID Foam Roller with Free Online Instructional Videos, Original (13-Inch)",
+    "title": "TriggerPoint GRID Foam Roller",
     "ratings": "****",
     "offer": "30% off",
     "price": "$16",
@@ -54,24 +57,58 @@
   },
   {
     "id": 8,
-    "title": "DEGOL Skipping Rope Tangle-Free with Ball Bearings Rapid Speed Jump Rope",
+    "title": "DEGOL Skipping Rope Tangle-Free with Ball",
     "ratings": "****",
+    "offer": "30% off",
     "price": "$9.99",
     "description": "Smooth and Fast: the ball bearing system avoids the twisting, winding or bending like other fitness ropes, it ensures stable and relaxed rotation, as our skipping rope can bear heavy load, which brings your a perfect exercise of skipping rope, also provides the best fluency for elite fitness professionals. Sports Fitness: our exercise skipping rope can shape your cardio endurance, stamina and speed, while improving the muscle tension of your whole body. A great choice for boxing, MMA and cross training. PVC Embedded Wire Rope: the braided steel wire rope is coated with PVC, which features durable and smooth, ensures the maximum service life and avoids cracking or breaking."
   },
   {
     "id": 9,
-    "title": "AmazonBasics Flat Weight Workout Exercise Bench - 41 x 20 x 11 Inches, Black",
+    "title": "Flat Weight Workout Exercise Bench",
     "ratings": "****",
+    "offer": "30% off",
     "price": "$40",
     "description": "Flat weight bench enhances any home gym; ideal for both beginning and advanced levels. Accommodates a wide range of fitness routines for a full-body workout in a small amount of space Made of rugged high-quality materials, including a durable steel tube frame and a smooth PVC top surface. Assembles quickly and easily; weighs 24 pounds upside down T shaped legs/feet for reliable stability. Measures 41 x 11 (bench surface width) / 19.7 (overall width) x 17.9 inches (LxWxH) backed by an AmazonBasics one year limited warranty"
   },
   {
     "id": 10,
-    "title": "Fihapyli Women's Yoga Tops Open Back Mesh Breathable Workout Tops for Womens Pilates Tops Racerback Running Tank Tops",
+    "title": "Fihapyli Women's Yoga Tops",
     "ratings": "****",
     "offer": "75% off",
     "price": "$14.99",
     "description": "95% Modal 5% Cotton. Do Not Bleach. Design: Open back with soft mesh, Sexy and charming, keeps air flowing, Keep you cool. Occasion: Heath workout running yoga fitness tank top, any type of sports or daily wear. Fabric: Quick dry, Stretchy, Breathable, Super soft, Skin Friendly, Moisture wicking. Eco-friendly: Modal and Cotton from wood, and can be naturally degraded. Notice: MACHINE WASH COLD (Below 30°). IRON LOW. DO NOT BLEACH"
+  },
+  {
+    "id": 11,
+    "title": "Fihapyli Women's Yoga Tops",
+    "ratings": "****",
+    "bannerOffer": "75% off",
+    "price": "$14.99",
+    "description": "95% Modal 5% Cotton. Do Not Bleach. Design: Open back with soft mesh, Sexy and charming, keeps air flowing, Keep you cool. Occasion: Heath workout running yoga fitness tank top, any type of sports or daily wear. Fabric: Quick dry, Stretchy, Breathable, Super soft, Skin Friendly, Moisture wicking. Eco-friendly: Modal and Cotton from wood, and can be naturally degraded. Notice: MACHINE WASH COLD (Below 30°). IRON LOW. DO NOT BLEACH"
+  },
+  {
+    "id": 12,
+    "title": "Flat Weight Workout Exercise Bench",
+    "ratings": "****",
+    "bannerOffer": "30% off",
+    "price": "$40",
+    "description": "Flat weight bench enhances any home gym; ideal for both beginning and advanced levels. Accommodates a wide range of fitness routines for a full-body workout in a small amount of space Made of rugged high-quality materials, including a durable steel tube frame and a smooth PVC top surface. Assembles quickly and easily; weighs 24 pounds upside down T shaped legs/feet for reliable stability. Measures 41 x 11 (bench surface width) / 19.7 (overall width) x 17.9 inches (LxWxH) backed by an AmazonBasics one year limited warranty"
+  },
+  {
+    "id": 13,
+    "title": "Fihapyli Women's Yoga Tops",
+    "ratings": "****",
+    "bannerOffer": "75% off",
+    "price": "$14.99",
+    "description": "95% Modal 5% Cotton. Do Not Bleach. Design: Open back with soft mesh, Sexy and charming, keeps air flowing, Keep you cool. Occasion: Heath workout running yoga fitness tank top, any type of sports or daily wear. Fabric: Quick dry, Stretchy, Breathable, Super soft, Skin Friendly, Moisture wicking. Eco-friendly: Modal and Cotton from wood, and can be naturally degraded. Notice: MACHINE WASH COLD (Below 30°). IRON LOW. DO NOT BLEACH"
+  },
+  {
+    "id": 14,
+    "title": "Flat Weight Workout Exercise Bench",
+    "ratings": "****",
+    "bannerOffer": "30% off",
+    "price": "$40",
+    "description": "Flat weight bench enhances any home gym; ideal for both beginning and advanced levels. Accommodates a wide range of fitness routines for a full-body workout in a small amount of space Made of rugged high-quality materials, including a durable steel tube frame and a smooth PVC top surface. Assembles quickly and easily; weighs 24 pounds upside down T shaped legs/feet for reliable stability. Measures 41 x 11 (bench surface width) / 19.7 (overall width) x 17.9 inches (LxWxH) backed by an AmazonBasics one year limited warranty"
   }
 ]

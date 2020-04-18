@@ -11,11 +11,13 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import StarRateIcon from "@material-ui/icons/StarRate";
+
 const image = require("../ui/images/adjustable-dumbbells.jpg");
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    width: 200,
+    marginTop: "5px",
   },
   media: {
     height: 0,
@@ -31,6 +33,12 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
+  flexItem: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around"
+  },
+
 }));
 
 export default function CardContainer(props) {
@@ -39,24 +47,24 @@ export default function CardContainer(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-let data = props.data;
+  let data = props.data;
 
   return (
-    <>
-      {data.map(i =>{
+    <div className={classes.flexItem}>
+      {data.map(i => {
         return (
           <Card key={i} className={classes.root}>
             <CardHeader
-              title={i.title}
-              subheader={<StarRateIcon />}
+              title={""}
+              subheader={i.title}
             />
             <CardMedia className={classes.media} image={image} title="Paella dish" />
 
             <CardContent>
-              <Typography variant="body2" component="p" paragraph>
-                {i.offer}
+              <Typography variant="body2" component="p">
+                {i.offer ? i.offer : i.bannerOffer}
               </Typography>
-              <Typography variant="body2" component="p" paragraph>
+              <Typography variant="body2" component="p">
                 {i.price}
               </Typography>
             </CardContent>
@@ -79,7 +87,7 @@ let data = props.data;
             </Collapse>
           </Card>
         )
-    })}
-    </>
+      })}
+    </div>
   );
 }
