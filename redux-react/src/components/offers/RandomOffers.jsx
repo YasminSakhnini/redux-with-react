@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
 const RandomOffers = () => {
   let data = useSelector((state) => state.api.products.filter(i => { return i.offer }
   ));
-  console.log("data", data);
   let randomOffersData = data.filter(i => {
     return i.id
   });

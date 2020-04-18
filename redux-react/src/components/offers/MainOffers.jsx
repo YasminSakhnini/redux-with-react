@@ -5,7 +5,6 @@ import CardContainer from "../ui/CardContainer"
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // background: "pink",
     flexBasis: "50%",
   },
 }

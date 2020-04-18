@@ -10,13 +10,13 @@ import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import StarRateIcon from "@material-ui/icons/StarRate";
+import StarRoundedIcon from '@material-ui/icons/StarRounded';
+import StarHalfRoundedIcon from '@material-ui/icons/StarHalfRounded';
 
 const image = require("../ui/images/adjustable-dumbbells.jpg");
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 200,
+    width: 150,
     marginTop: "5px",
   },
   media: {
@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around"
   },
+  color: {
+    color: "#ffff46",
+  }
 
 }));
 
@@ -48,25 +51,36 @@ export default function CardContainer(props) {
     setExpanded(!expanded);
   };
   let data = props.data;
-
+  let ratings = [<StarRoundedIcon className={classes.color} />, <StarRoundedIcon className={classes.color} />, <StarRoundedIcon className={classes.color} />, <StarRoundedIcon className={classes.color} />, <StarHalfRoundedIcon className={classes.color} />];
   return (
     <div className={classes.flexItem}>
       {data.map(i => {
         return (
-          <Card key={i} className={classes.root}>
+          <Card key={i.id} className={classes.root}>
             <CardHeader
               title={""}
               subheader={i.title}
             />
             <CardMedia className={classes.media} image={image} title="Paella dish" />
-
-            <CardContent>
+            <CardContent className={classes.flexItem}>
               <Typography variant="body2" component="p">
                 {i.offer ? i.offer : i.bannerOffer}
               </Typography>
               <Typography variant="body2" component="p">
                 {i.price}
               </Typography>
+            </CardContent>
+            <CardContent className={classes.flexItem}>
+              {ratings.map(star => {
+                return (
+                  <Typography>
+                    {<StarRoundedIcon className={classes.color} /> ? <StarRoundedIcon className={classes.color} /> : <StarHalfRoundedIcon className={classes.color} />}
+                  </Typography>
+                )
+              })}
+              {/* <Typography>
+                <StarHalfRoundedIcon className={classes.color} />
+              </Typography> */}
             </CardContent>
             <CardActions disableSpacing>
               <IconButton

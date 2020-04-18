@@ -211,22 +211,12 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton
-              onClick={() => {
-                dispatch({
-                  type: 'INCREASE_OFFERS_COUNTER',
-                })
-              }} to="/src/components/Offers.jsx" aria-label="show 4 new offers" color="inherit">
+            <IconButton component={Link} to="/offers" aria-label=" show 4 new offers" color="inherit">
               <Badge badgeContent={offersCount} color="secondary">
                 <RedeemIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              onClick={() => {
-                dispatch({
-                  type: 'INCREASE_PRODUCTS_COUNTER',
-                })
-              }} aria-label="show 17 new products" color="inherit">
+            <IconButton component={Link} to="/products" aria-label="show 17 new products" color="inherit">
               <Badge badgeContent={productsCount} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
@@ -257,6 +247,6 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-    </div>
+    </div >
   );
 }

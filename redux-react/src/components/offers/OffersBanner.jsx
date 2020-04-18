@@ -10,8 +10,6 @@ const OffersBanner = () => {
   ));
 
   let bannerOffersData = data.filter(i => {
-    console.log('i.bannerOffer', i.bannerOffer);
-
     return i.bannerOffer
   });
 
