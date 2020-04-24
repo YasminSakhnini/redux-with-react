@@ -15,3 +15,16 @@ const transform = pipe(tirm, toLowerCase, wrap("div"));
 //so our proplem is the wrap() has 2 arguments so to fix that we are going to use "currying"
 transform(input)
 
+//-------------------------------------------------------------------------------------------
+// ## Pure Function
+//gives the same result everytime we call it
+// No random values
+// No current date/time
+//No global state (DOM, files, db, etc)
+//No mutation of paraameters
+
+//##Benefits of pure functions
+// self-documenting
+// easily testable
+// concurrency
+//cacheable
