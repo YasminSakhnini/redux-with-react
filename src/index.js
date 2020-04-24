@@ -1,21 +1,17 @@
-import { compose, pipe } from 'lodash/fp';
+import { pipe } from 'lodash/fp';
 // ## Function Composition
 
 const trim = str => str.trim();
-const wrapInDiv = str => `<div> ${str} </div>`;
+// const wrapInDiv = str => `<div> ${str} </div>`;
+// const wrpaInSpan = str => `<span> ${str} </span>`;
+
+// const wrap = (type, str) => `<${type}> ${str} </${type}>`
+const wrap = type => str => `<${type}> ${str} </${type}>`;
 const toLowerCase = str = str.toLowerCase();
 
-const result = wrapInDiv(toLowerCase(trim(input)));
 
-//-------------------------------------------------------------------
-//Composing and Piping
-//Lodash library
-const transform = compose(wrapInDiv, toLowerCase, tirm)
+const transform = pipe(tirm, toLowerCase, wrap("div"));
+//this is going to give an error because the resault of wrap() is not a function
+//so our proplem is the wrap() has 2 arguments so to fix that we are going to use "currying"
 transform(input)
-// it does exactly as
-//const result = wrapInDiv(toLowerCase(trim(input)));
-
-
-// to do the same thing with the correct order we use pipe
-const transform = pipe(tirm, toLowerCase, wrapInDiv)
 
