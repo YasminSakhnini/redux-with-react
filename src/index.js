@@ -1,20 +1,16 @@
-import { produce } from 'immer';
+import store from './store';
 
-let book = { title: "Boys shouls be boys" };
+store.dispatch({
+  type: 'bugAdded',
+  payload: {
+    description: 'bug1'
+  }
+});
 
-function publish(book) {
-  return produce(book, draftBook => {
-    draftBook.isPublished = true;
-  });
-}
-
-let updated = publish(book);
-console.log('book', book);
-
-console.log('updated', updated);
-
-// Steps to build a redux app
-//Design the store
-//Define the actions
-//Create reducer
-//Set up the store
+store.dispatch({
+  type: 'bugRemoved',
+  payload: {
+    id: 1
+  }
+})
+console.log('store', store.getState());
