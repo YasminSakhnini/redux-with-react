@@ -13,7 +13,10 @@ let lastId = 0;
 createReducer([], {
    //key: value
    //actions: functions (event => event handler)
-  bugAdded: (bugs, action) => {
+  //with [ ] we will dynamically computed the name 
+  //of the prosperity  "bugAdded", "bugResolved"
+  //so if I want to change "bugAdded" on line 7 I dont need to touch this function
+  [bugAdded.type]: (bugs, action) => {
     bugs.push({
       id: ++lastId,
       description: action.payload.description,
@@ -21,7 +24,7 @@ createReducer([], {
     })
   },
 
-  bugResolved: (bugs, action) => {
+  [bugResolved.type]: (bugs, action) => {
     const index = bugs.findIndex(bug => bug.id === action.payload.id)
     bugs[index].resolved = true;
   },
