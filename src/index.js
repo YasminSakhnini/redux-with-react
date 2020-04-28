@@ -13,18 +13,13 @@ store.dispatch(bugAdded({ description: 'Bug 2'}));
 store.dispatch(bugAdded({ description: 'Bug 3'}));
 store.dispatch(bugResolved({id: 1}));
 
-const unReslovedBugs = getUnresolvedBugs(store.getState())
-console.log('unReslovedBugs', unReslovedBugs);
-
-
-
-
-//Better way than this to select part of the state is to create a selctor  "getUnresolvedBugs"
-/*
-const unReslovedBugs = store
-  .getState()
-  .entities.bugs.filter(bug => !bug.resolved )
-console.log('unReslovedBugs', unReslovedBugs);
-
-console.log('store', store.getState());
-*/
+const x = getUnresolvedBugs(store.getState());
+const y = getUnresolvedBugs(store.getState());
+console.log('x === y', x === y); // >> false we get 2 different arrays in memory
+//It is a proplem with react because 
+//it will rerender the component regardless of its state
+//SO the we should use memoization on this function getUnresolvedBugs
+//f(x) => y
+// { input: 1, output: 2 }
+// so if the bugs did not changed we can get the bugs from the cache 
+// we dont need to memoizing it by hand .. npm i reselect
