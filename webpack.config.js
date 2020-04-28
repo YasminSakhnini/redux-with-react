@@ -10,6 +10,11 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     port: 9000
   },
+  module: {
+    rules: [
+      { test: /\.txt$/, use: 'raw-loader' }
+    ]
+  },
   mode: "development",
   devtool: "source-map"
 };

@@ -10,12 +10,15 @@
   "author": "Yas KLuw",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^3.5.3",
+    "ts-loader": "^7.0.1",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
+    "axios": "^0.19.2",
     "immer": "^6.0.3",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.15",
